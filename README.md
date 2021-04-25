@@ -11,6 +11,7 @@
 - [ ] Result of Shearing
 
 ## 2 - Kernel and Image
-- [ ] Finding Kernel
-- [ ] Finding Image
+- [x] Finding Kernel / Null Space
+- [x] Finding Image / Column Space
+- [x] Finding Dimensions
 - [ ] Finding Basis
