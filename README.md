@@ -1,4 +1,4 @@
-# Python Scripts for Calculating Linear Algebra
+# Simple Scripts for Calculating Linear Algebra
 
 ## 0 - Basic Operations
 - [x] Calculate Unit Vector and Magnitude
