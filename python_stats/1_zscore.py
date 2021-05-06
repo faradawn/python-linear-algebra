@@ -23,4 +23,4 @@ def pvalue(n):
     ans = sci.norm.cdf(n)
     print(ans)
     return ans
-print(pvalue(1) - pvalue(-1))
+
