@@ -1,9 +1,9 @@
 from numpy import *
 from sympy import *
 
-v1 = array([2,3,6])
-v2 = array([3,-6,2])
-x = array([49,49,49])
+v1 = array([5,4,2,2])
+v2 = array([3,6,7,-2])
+x = array([14,-14,0,-7])
 
 # converts into unit array
 def unit(v):
@@ -14,15 +14,12 @@ u1 = unit(v1)
 v2_perp = v2 - (v2.dot(u1)*(u1))
 u2 = unit(v2_perp)
 print("v2 perp:", v2_perp)
-print("u1:", u1)
-print("u2: ", u2)
 
 # projection matrix
-Q = array([u1,u2]) # transposed
-proj = Q.T.dot(Q)
-print("\nproj matrix: \n", proj)
-print("proj result: \n", proj.dot(x))
-
+Q = array([u1,u2]).T 
+proj = Q.dot(Q.T)
+print("\northo basis:\n", Q)
+print("proj mat:\n", proj)
 
 from analyze_mat import *
 A = Matrix(proj)
