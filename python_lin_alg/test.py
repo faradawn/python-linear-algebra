@@ -1,15 +1,11 @@
-import numpy as np
+from numpy import *
 from sympy import *
 
-M = Matrix([[14, 0, 11, 3], [22, 23, 4, 7], [-12, -34, -3, -4]])
+A = array([[1,1],[1,0],[0,1]])
+b = array([3,3,3])
+mult = matmul(A.T, A)
 
+res = mult.dot(A.T).dot(b.T)
 
-x1 = Matrix([[0.2,0.4],[0.4,0.8]])
-print(x1.rref())
-
-a = 3
-b = 5
-print(np.exp(a) - np.exp(b))
-print(np.exp(a-b))
-
+print(b-A.dot(res))
 

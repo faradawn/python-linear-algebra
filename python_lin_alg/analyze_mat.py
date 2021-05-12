@@ -2,6 +2,7 @@ import numpy as np
 from sympy import Matrix
 
 # initializing a few matrices
+A = Matrix([[1,1],[1,0],[0,1]])
 
 
 def analyze_mat(A):
@@ -33,5 +34,4 @@ def analyze_mat(A):
         print("\ninvertible: false")
     
 
-
-
+analyze_mat(A)
