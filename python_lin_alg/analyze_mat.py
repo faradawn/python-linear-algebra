@@ -1,8 +1,8 @@
 import numpy as np
 from sympy import Matrix
 
-# initializing a few matrices
-A = Matrix([[1,1],[1,0],[0,1]])
+# input the matrix
+A = Matrix([[1,2,3,4],[1,2,2,4],[2,1,6,8],[1,2,3,6]])
 
 
 def analyze_mat(A):
@@ -29,9 +29,10 @@ def analyze_mat(A):
     
     # inverse and determinant
     if A.det() == 0:
-        print("\ninvertible: true")
-    else:
         print("\ninvertible: false")
-    
+    else:
+        print("\ninvertible: true")
+        print("det: ", A.det())
+
 
 analyze_mat(A)

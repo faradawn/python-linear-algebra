@@ -1,9 +1,13 @@
 from numpy import *
 from sympy import *
 
-A = array([[5,3],[4,6],[2,7],[2,-2]])
+# v1 and v2 for matrix A
+v1 = array([5,4,2,2])
+v2 = array([3,6,7,-2])
+A = array([v1,v2]).T
+
 b = array([27,0,0,0]).T
-x = array([14,-14,0,-7]).T
+
 
 def least_sqr(A, b):
     mult = (matmul(A.T, A))
@@ -25,11 +29,3 @@ def least_sqr(A, b):
 # print("error modulus: sqrt", error_modulus)
 
 
-def proj(A):
-    inner = linalg.inv(matmul(A.T, A))
-    front = matmul(A, inner)
-    res = matmul(front, A.T)
-    return res
-
-print("proj matrix: ", proj(A))
-print("proj * x:", proj(A).dot(x))

@@ -1,11 +1,8 @@
-from numpy import *
 from sympy import *
 
-A = array([[1,1],[1,0],[0,1]])
-b = array([3,3,3])
-mult = matmul(A.T, A)
+k = symbols("k")
 
-res = mult.dot(A.T).dot(b.T)
-
-print(b-A.dot(res))
+A = Matrix([[7,k,1,5],[1,0,k,-1],[3,0,0,2],[1,0,1,1]])
+B = Matrix([[1,2,3,4],[1,2,2,4],[2,1,6,8],[1,2,3,6]])
+print(A.det())
 

@@ -1,6 +1,8 @@
 from numpy import *
 from sympy import *
 
+# v1 = array([5,4,2,2])
+# v2 = array([3,6,7,-2])
 v1 = array([5,4,2,2])
 v2 = array([3,6,7,-2])
 x = array([14,-14,0,-7])
