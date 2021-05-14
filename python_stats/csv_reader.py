@@ -1,11 +1,11 @@
+from pandas import *
 import csv
 
-# data = csv.reader(open("contact-info.csv"), delimiter="	")
+# remove trailing comma: sed 's/,$//' test.csv > temp.csv
+# add header: sed $'1s/^/<column names>\\\n&/‘ temp.csv > out.csv
 
-data = open("data_sheets/test.csv")
-read = csv.reader(data, delimiter=";")
+# panda print data frame with sort
+data = read_csv("./data/out.csv")
+data = data.sort_values(by="cnet")
+print(data)
 
-print(read)
-after_sort = sorted(data, key=lambda row : row[1], reverse=True)
-
-print(after_sort)
