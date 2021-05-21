@@ -1,8 +1,10 @@
 import numpy as np
 from sympy import Matrix
+from sympy import symbols
 
 # input the matrix
-A = Matrix([[1,2,3,4],[1,2,2,4],[2,1,6,8],[1,2,3,6]])
+a,b,c,d = symbols("a b c d")
+A = Matrix([[a+1,b],[c,d+1]])
 
 
 def analyze_mat(A):
