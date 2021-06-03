@@ -3,9 +3,9 @@ from sympy import *
 
 # v1 = array([5,4,2,2])
 # v2 = array([3,6,7,-2])
-v1 = array([5,4,2,2])
-v2 = array([3,6,7,-2])
-x = array([14,-14,0,-7])
+v1 = array([0,2,0])
+v2 = array([3,4,4])
+x = array([7,2,1])
 
 # converts into unit array
 def unit(v):
