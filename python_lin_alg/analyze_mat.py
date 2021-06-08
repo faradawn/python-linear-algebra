@@ -3,8 +3,8 @@ from sympy import Matrix
 from sympy import symbols
 
 # input the matrix
-a,b,c,d = symbols("a b c d")
-A = Matrix([[a+1,b],[c,d+1]])
+# a,b,c,d = symbols("a b c d")
+# A = Matrix([[a+1,b],[c,d+1]])
 
 
 def analyze_mat(A):
@@ -37,4 +37,3 @@ def analyze_mat(A):
         print("det: ", A.det())
 
 
-analyze_mat(A)
