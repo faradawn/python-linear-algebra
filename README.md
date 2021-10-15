@@ -28,3 +28,31 @@ alias gi="git push"
 alias gl="git pull"
 alias de="conda deactivate"`
 ```
+
+
+## Old Scripts
+scipy integrate
+```py
+from scipy.integrate import quad
+from sympy import *
+
+# original function 
+def x_y_func(x,y):
+    return 3/2*(x**2+y**2)
+
+# y bound
+inner_hi = 1
+inner_low = 0
+# x bound
+outer_hi = 1
+outer_low = 0
+
+# inner dy results in x function
+def x_func(x):
+    hi = inner_hi
+    low = inner_low
+    return quad(x_y_func, hi, low, args=(x))[0]
+
+# outer dx results in numeric
+result = quad(x_func, outer_hi, outer_low)[0]
+```
